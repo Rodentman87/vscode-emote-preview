@@ -1,0 +1,50 @@
+{
+	"name": "vscode-emote-preview",
+	"displayName": "VS Code Emote Preview",
+	"description": "A small extension to render discord emoji inside your editor",
+	"version": "0.0.1",
+	"publisher": "Maisy Dinosaur",
+	"keywords": [
+		"emoji",
+		"discord"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Rodentman87/vscode-emote-preview"
+	},
+	"engines": {
+		"vscode": "^1.68.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:typescript",
+		"onLanguage:javascript",
+		"onLanguage:typescriptreact",
+		"onLanguage:javascriptreact"
+	],
+	"main": "./out/extension.js",
+	"contributes": {},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.68.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"@typescript-eslint/eslint-plugin": "^5.27.0",
+		"@typescript-eslint/parser": "^5.27.0",
+		"eslint": "^8.16.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"typescript": "^4.7.2",
+		"@vscode/test-electron": "^2.1.3"
+	}
+}
